@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Links</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Main Container -->
+    <div class="container">
+
+        <!-- EDITOR SECTION (Start Here) -->
+        <div id="editor-section">
+            <header class="profile">
+                <h1>Create Your Page</h1>
+                <p>Enter your details below to generate your link page.</p>
+            </header>
+
+            <div class="input-group">
+                <label>Profile Name</label>
+                <input type="text" id="input-name" placeholder="Ex: John Doe">
+            </div>
+
+            <div class="input-group">
+                <label>Bio (Optional)</label>
+                <input type="text" id="input-bio" placeholder="Ex: Digital Artist & Developer">
+            </div>
+
+            <hr class="divider">
+
+            <div id="links-form">
+                <!-- Link Inputs will be added here -->
+            </div>
+
+            <button onclick="addLinkField()" class="btn secondary-btn">+ Add Another Link</button>
+            <br><br>
+            <button onclick="generateProfile()" class="btn primary-btn">✨ Generate Page</button>
+        </div>
+
+        <!-- PREVIEW SECTION (Hidden initially) -->
+        <div id="preview-section" class="hidden">
+            <header class="profile">
+                <img src="https://api.dicebear.com/9.x/micah/svg?seed=Generative" alt="Profile Picture"
+                    id="profile-img">
+                <h1 id="profile-name">John Doe</h1>
+                <p id="profile-bio">Welcome to my official links page.</p>
+            </header>
+
+            <div id="links-container">
+                <!-- Links will go here -->
+            </div>
+
+            <button onclick="editProfile()" class="btn secondary-btn" style="margin-top: 20px;">✏️ Edit</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
